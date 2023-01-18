@@ -125,6 +125,10 @@ public class ballgame {
 					g2d.setColor(Color.WHITE);
 					g2d.setFont(new Font("TimesRoman",Font.BOLD,20));
 					g2d.drawString("score : "+ score, CANVAS_WIDTH/2 -40, 20);
+					if( isGameFinish ) {
+						g2d.setColor(Color.RED);
+						g2d.drawString("Game Finished!", CANVAS_WIDTH/2 - 55, 50);
+					}
 					
 					
 					g2d.setColor(Color.WHITE);
@@ -213,8 +217,7 @@ public class ballgame {
 				}
 			}
 			if( count == BLOCK_ROWS * BLOCK_COLUMS) {
-				//Game Finished!
-				//timer.stop();
+				
 				isGameFinish = true;
 			}
 
